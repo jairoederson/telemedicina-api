@@ -1,0 +1,130 @@
+.espacio-bottom{
+  padding-bottom: 50px;
+}
+.espacio-top{
+  padding-top: 50px;
+}
+.espacio-left{
+  padding-left: 50px;
+}
+.espacio-right{
+  padding-right: 50px;
+}
+
+.section-mobile{
+  background-color: #f9f9f9;
+  padding-top: 80px;
+}
+.title-content-mobile{
+  padding: 180px 50px 20px 50px;
+}
+.title-content-mobile>h1{
+  color: #000;
+  font-weight: bold;
+}
+.description-content-mobile{
+  padding: 0px 50px 50px 50px;
+}
+.description-item{
+  padding: 10px;
+}
+.btn-register{
+  background-color: #fff;
+  border: 1px solid;
+}
+
+.description-content{
+  padding: 20px 50px 50px 50px;
+}
+.description-section-information{
+  background-color: #e22715;
+  height: 700px;
+  padding-top: 237px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 237px;
+}
+.description-information{
+  color: #fff;
+  text-align: justify;
+}
+
+.img-information{
+  position: relative;
+  background-image: url(https://parks.arlingtonva.us/wp-content/uploads/sites/17/2014/03/istock-latino-family.jpg);
+  width: 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: cover;
+}
+
+.title-how-work{
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.video-how-work{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.items-how-work{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.section-stepper{
+  background-color: #f9f9f9;
+}
+.title-stepper{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.numbers-sttepper{
+  padding-top: 50px;
+}
+.btn-stepper{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.number1{
+    background-color: transparent;
+    border: 1px solid #5fb302;
+    border-radius: 50%;
+    display: table;
+    height: 80px;
+    margin: 0 auto;
+    width: 80px;
+    margin-top: 0px;
+
+}
+.description-final-stepper{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.deal-final-stepper{
+  padding-bottom: 100px;
+}
+
+.section-phrase{
+  background-color: #e22715;
+}
+
+.section-app{
+  background-color: #fff;
+}
+
+.phrase-section-app{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title-section-app{
+  padding-top: 100px;
+}
+
+.img-section-app{
+  padding-bottom: 100px;
+}

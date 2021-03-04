@@ -1,0 +1,38 @@
+.form-group.is-focused label.inputsuccess {
+    color : #01BC8C !important;
+}
+.form-group.has-success label.control-label {
+    color : #5fb30f !important;
+}
+.has-success .form-control:focus {
+    border-color : #5fb30f !important;
+}
+.form-group.is-focused label.inputwarning,
+.form-group.has-warning label.control-label {
+    color : #f89a14 !important;
+}
+.has-warning .form-control:focus {
+    border-color : #f89a14 !important;
+}
+.form-group.is-focused label.inputerror,
+.form-group label.inputerror {
+    color : #ef6f6c !important;
+}
+.form-group.has-error label.control-label {
+    color : #ef6f6c !important;
+}
+.has-error .form-control:focus,
+.error-state .form-control:focus{
+    border-color : #ef6f6c !important;
+    background-image: linear-gradient(#ef6f6c, #ef6f6c), linear-gradient(#d2d2d2, #d2d2d2);
+}
+.fileinput-new .btn-primary span {
+    cursor : pointer !important;
+}
+.thumbnail {
+    width  : 200px;
+    height : 150px;
+}
+.checkbox .checkbox-material .check {
+    z-index: 0;
+}

@@ -1,0 +1,504 @@
+/* GENERAL */
+@media screen and (min-width: 992px) and (max-width: 1100px){
+  .collapsible > li > a {
+    font-size: 10.5px !important;
+    padding-right: 0px !important;
+    padding-left: 13px !important;
+  }
+  .collapsible > li > a > i {
+    font-size: 20px !important;
+    margin-right: 12px !important;
+  }
+  #logofarma{
+    padding-top: 10px
+  }
+  body, label, b, span, p, li{
+    font-size: 12px !important;
+  }
+
+  #tableHistorial_filter{
+    width: 210px !important;
+  }
+  #tableHistorial_filter > label > input{
+    width: 145px !important;
+  }
+
+  #tableAnalisis_filter{
+    width: 210px !important;
+  }
+
+
+
+  #tableAnalisis_filter > label > input{
+    width: 80% !important;
+  }
+
+  #tableReceta_filter{
+    width: 210px !important;
+  }
+  #tableReceta_filter > label > input{
+    width: 145px !important;
+  }
+
+}
+@media screen and (min-width: 1101px) and (max-width: 1300px){
+
+}
+a {
+  color: white;
+}
+i {
+  margin-right: 20px !important;
+}
+.max-ancho{
+  margin: auto;
+  max-width: 1400px;
+}
+.nav-header a:hover{
+  background: #ffffff !important;
+  /* background-color: #ffffff !important; */
+}
+.nav-header-bg a:hover{
+  background: #ffffff !important;
+  background-color: #eeeeef !important;
+}
+.menu-aside a:hover{
+  background: #868686 !important;
+  /* background-color: #ffffff !important; */
+}
+
+.color-white{
+  color: #FFFFFF;
+}
+.paginate_page{
+  color: red !important;
+  visibility: hidden;
+}
+.paginate_page::after{
+  visibility: visible;
+  color: #000000 !important;
+  content: 'Página';
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.format{
+  text-transform: none !important;
+}
+.icon-notification{
+  margin-right: 0px !important;
+  color: #9f9f9f;
+}
+.icon-message{
+  color: #9f9f9f;
+  margin-right: 0px !important;
+}
+.section-content{
+  height: auto;
+  width:100%;
+  padding: 4% 4% 4% 4%;
+  background-color: #f4f4f4;
+}
+
+.button-green{
+  background-color: #fff;
+  color: red;
+  border: 1px solid red;
+  width: auto;
+}
+
+.button-orange{
+  background-color: #fff;
+  color: red;
+  border: 1px solid red;
+  width: auto;
+}
+
+.content-title{
+  line-height: 35px;
+}
+.align-left{
+  text-align: left;
+}
+.align-bottom{
+  text-align: bottom;
+}
+.align-right{
+  text-align: right;
+}
+.align-top{
+  text-align: top;
+}
+.align-center{
+  text-align: center;
+}
+.align-justify{
+  text-align: justify;
+}
+
+.border-top{
+  border-top: 1px solid #e0e0e0;
+}
+
+.content-inside{
+  background-color: #ffffff;
+}
+.margin-top-element{
+  margin-top: 25px !important;
+}
+.margin-bottom-element{
+  margin-bottom: 25px !important;
+}
+.margin-right-element{
+  margin-right: 25px !important;
+}
+.margin-left-element{
+  margin-left: 25px !important;
+}
+.padding-top-element{
+  padding-top: 25px !important;
+}
+.padding-bottom-element{
+  padding-bottom: 25px !important;
+}
+.padding-right-element{
+  padding-right: 25px !important;
+}
+.padding-left-element{
+  padding-left: 25px !important;
+}
+.without-padding-top{
+  padding-top: 0px !important;
+}
+.without-padding-bottom{
+  padding-bottom: 0px !important;
+}
+.without-padding-left{
+  padding-left: 0px !important;
+}
+.without-padding-right{
+  padding-right: 0px !important;
+}
+.without-margin-top{
+  margin-top: 0px !important;
+}
+.without-margin-bottom{
+  margin-bottom: 0px !important;
+}
+.without-margin-left{
+  margin-left: 0px !important;
+}
+.without-margin-right{
+  margin-right: 0px !important;
+}
+.margin-element{
+  margin: 25px !important;
+}
+.padding-element{
+  padding: 25px !important;
+}
+
+.dataTables_filter{
+  margin-top: -66.5px;
+  line-height: 2.5rem;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  height: 35px;
+  width: auto !important;
+  text-align: right;
+  padding-left: 10px !important;
+  padding-right:  8px !important;
+  float: right;
+}
+.dataTables_filter > label {
+  background-color: #FFFFFF;
+}
+.dataTables_filter > label > input {
+  background: url(/assets/images/search.png) right no-repeat;
+  background-size: 18px;
+  font-size: 14px !important;
+  height: 2rem !important;
+  border-bottom: none !important;
+  /* border-bottom: 1px solid #cacaca !important; */
+}
+
+#tableReceta_filter {
+  margin-top: -68px;
+  /* padding-right: 200px !important; */
+  padding-left:10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+}
+#tableReceta_filter > label {
+  width: 20px;
+  /* margin-top: -90px; */
+  /* padding-right: 200px !important; */
+  /* padding-left:10px; */
+
+}
+
+#tableReceta_filter > label > input {
+  /* width: 200px; */
+  background: url(/assets/images/search.png) right no-repeat;
+  background-size: 18px;
+}
+
+#tableReceta_filter > label > input:focus {
+  border-bottom: 1px solid #bebebe !important;
+}
+/* GENERAL END */
+
+/* LAYOUT */
+
+
+
+/* LAYOUT END */
+.account-header{
+  max-width:100%;
+}
+.restrictions{
+  position: absolute;
+  padding-left: 45px;
+  margin-top: -20px;
+}
+.icon-visibility{
+  padding-top: 20px !important;
+}
+.input-control{
+  padding-left: 25px;
+}
+.account-content{
+  padding: 20px;
+}
+
+.doctor-name{
+  font-size: 16px !important;
+}
+
+
+.cabecera-datos{
+  padding-left: 50px !important;
+}
+
+.receta-name-doctor{
+  font-size: 18px;
+}
+
+.cabecera-detalle{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.contenido-detalle{
+  padding-left: 30px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  /* border-bottom: 1px solid #e0e0e0; */
+}
+.footer-detalle{
+  text-align: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.buttons-detalle{
+  padding-top: 25px;
+}
+.button-cancel{
+  font-size: 35px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+/* RECETA END */
+
+
+/* CONSULTAS */
+.modal-cabecera{
+  background-color: #e22715 !important;
+}
+.modal-pie{
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 100%;
+}
+.title-modal{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 25px !important;
+}
+
+.img-paciente{
+  border-radius: 50%;
+}
+.name-paciente{
+  font-size: 19px !important;
+  color: #000000;
+}
+.tab-header{
+  width:1115px;
+}
+.tag-nombre{
+  color: #000000 !important;
+}
+.modalLlamada{
+  width: 500px;
+  border-radius: 5px;
+}
+
+.star-style{
+  margin-top: 10px;
+  font-size: 18px !important;
+  margin-right: 20px !important;
+}
+
+
+/* CONSULTAS END */
+
+
+/* INGRESOS */
+
+.label-price{
+  color: #868686;
+  font-size: 71px;
+}
+
+/* INGRESOS END */
+/* AYUDA */
+.ayuda-title{
+  padding-top:0px;
+  text-align: center;
+  font-size: 14px;
+}
+.another-questions{
+  color: #f09721 !important;
+}
+.button-question{
+  padding-bottom: 17px;
+
+}
+.question-detail{
+  padding-top:0px;
+}
+.tag-genero{
+  padding-left: 40px;
+  font-size: 11px;
+  color: rgba(0,0,0,0.42)
+}
+.tag-generoA{
+  padding-left: 40px;
+  font-size: 11px;
+  color: #868686;
+}
+.aboutme-input{
+  min-height: 3.2rem !important;
+  padding-top: 0px !important;
+}
+.aboutme-div{
+  padding-right: 0px;;
+}
+.label-input{
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+  position: absolute;
+}
+.button-cuenta{
+  background-color: #868686;
+}
+  width: 200px;
+
+
+/* AYUDA END */
+
+
+
+/* CHAT */
+
+.img-chat-user{
+  border-radius: 50% !important;
+}
+.message-chat{
+  text-align: justify;
+  background-color: #f5f4f3;
+  padding: 20px;
+  border-radius: 15px;
+  /* margin-left: 30px; */
+}
+.message-chat-oher{
+  /* padding-top: 50px; */
+  text-align: justify;
+  background-color: #f5f4f3;
+  padding: 20px;
+  border-radius: 15px;
+  /* margin-left: 30px; */
+  margin-top: 37px;
+}
+.chip-color{
+  background-color: #f5f4f3;
+  color: #000000;
+}
+.user-contact{
+  border-radius: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fafafa !important;
+  border-bottom: 1px solid #d8d6d4;
+}
+.icon-fullscreen{
+  font-size: 100px !important;
+}
+
+/* CHAT END */
+
+/* VIDEO */
+.video-call{
+  background-color: #181818 !important;
+}
+.modal-message{
+  width: 260px !important;
+  background-color: #ffffff !important;
+  left: inherit !important;
+}
+/* VIDEO END */
+
+/* HISTORIAL MEDICO */
+.padding-historial{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* HISTORIAL MEDICO END */
+
+/* LABORATORIO */
+#tableDiagnosticoHistorial_filter{
+  margin-bottom: 0px !important;
+  padding-right: 60px !important;
+  background-color: #fafafa;
+}
+#tableDiagnosticoHistorial_filter > label {
+  margin-right: 50px;
+}
+#tableDiagnosticoHistorial_filter > label > input{
+  border-bottom: 1px solid #000000 !important;
+}
+
+#tableResumenRecetaHistorial_filter{
+  margin-bottom: 0px !important;
+  padding-right: 60px !important;
+  background-color: #fafafa;
+}
+#tableResumenRecetaHistorial_filter > label > input{
+  border-bottom: 1px solid #000000 !important;
+}
+
+/* LLAMADA */
+.icon-call{
+  color: #ffffff;
+  font-size: 30px !important;
+}
+/* LLAMADA END */

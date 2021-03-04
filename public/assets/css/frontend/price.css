@@ -1,0 +1,108 @@
+/* ---------- Price Tabels ---------- */
+/* ---------- Price Box Round Symboll Css ---------- */
+.box_round_symboll{
+	background-color: #ef6f6c;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 21px 1px 1px 0px;
+  margin: auto;
+}
+/* ---------- //Price Box Round Symboll Css End---------- */
+/* ---------- Price Box Panel heading Css ---------- */
+.panel-heading{
+	background-color: #fff !important;
+	border: none;
+	margin-top: 10px;
+}
+/* ---------- //Price Box panel heading Css End ---------- */
+/* ---------- Price Box panel body Css ---------- */
+.panel-body {
+	background-color: #ffffff;
+}
+/* ---------- //Price Box panel body css End ---------- */
+/* ---------- Price Box border Css ---------- */
+.panel{
+	border: none;
+}
+/* ---------- //Price Box border Css End ---------- */
+/* ---------- Price Box button Css ---------- */
+.price-btn{
+	background-color: #01bc8c;
+	width: 100%;
+	color:#fff !important;
+	font-size: 16px;
+}
+/* ---------- //Price Box button Css End ---------- */
+/* _________ //Price Tables End _________ */
+
+#pricing_tables_title {
+margin-left: 13px;
+}
+
+h1{
+	font-weight: 500;
+}
+.text-orange{
+  color:#e22715 !important;
+}
+.section-price{
+	background-color: #f9f9f9;
+}
+
+.section-frequently-questions{
+	background-color: #fff;
+}
+
+.section-more-questions{
+	background-color: #e22715;
+}
+
+.section-price-layer-left{
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+	margin-bottom: 45px;
+}
+
+.section-price-layer-right{
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+
+.section-price-box{
+	padding-top: 45px;
+	padding-bottom: 45px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: #fff;
+}
+.see-pricing{
+	padding-top: 15px;
+}
+
+.bottom-text-price{
+	padding-top: 15px;
+}
+
+.btn-main{
+	background-color: #fff;
+
+	border: 1px solid;
+}
+
+.title-more-questions{
+	color: #fff;
+}
+
+.content-more-questions{
+	padding-top: 80px;
+	padding-bottom: 100px;
+	color: #fff;
+}
+
+.group-questions{
+	margin-top: 50px;
+}

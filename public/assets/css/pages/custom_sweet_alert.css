@@ -1,0 +1,30 @@
+.sweet-alert button {
+    border-radius : 0;
+}
+.content {
+    margin : 10px;
+}
+.sweet-alert h2 {
+    font-size : 20px;
+}
+.sweet-alert input {
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#009688),to(#009688)),-webkit-gradient(linear,left top,left bottom,from(#D2D2D2),to(#D2D2D2));
+    background-image: -webkit-linear-gradient(#009688,#009688),-webkit-linear-gradient(#D2D2D2,#D2D2D2);
+    background-image: -o-linear-gradient(#009688,#009688),-o-linear-gradient(#D2D2D2,#D2D2D2);
+    background-image: linear-gradient(#009688,#009688),linear-gradient(#D2D2D2,#D2D2D2);
+    background-size: 0 2px,100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom,center -webkit-calc(100% - 1px);
+    background-position: center bottom,center calc(100% - 1px);
+    background-color: rgba(0,0,0,0);
+    border     : none;
+    box-shadow : none;
+}
+.sweet-alert input:focus {
+    box-shadow: none;
+    border: none;
+}
+
+button.confirm{
+    background: #31B0D5;
+}

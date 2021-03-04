@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <base href="/web/doctor/">
+  <link rel="manifest" href="manifest.json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doctor</title>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/farmacias-logo.ico">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/dataTables.materialize.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/materialize.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/doctor.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/icon-material.css">
+  <link rel="stylesheet" type="text/css" href="assets/fonts/font-ubuntu.css">
+
+  <script type="text/javascript" src="assets/js/push.js"></script>
+  <!-- PDF MAKER -->
+  <script src='assets/build/pdfmake.min.js'></script>
+  <script src='assets/build/vfs_fonts.js'></script>
+  <!-- PDF MAKER END -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- <script src="https://js.pusher.com/3.0/pusher.min.js"></script> -->
+  <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css"></head>
+
+<body>
+  <app-root></app-root>
+
+  <script type="text/javascript" src="assets/js/materialize.js"></script>
+  <script type="text/javascript" src="assets/vendors/datatables/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="assets/js/dataTables.materialize.js"></script>
+
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="main.js"></script></body>
+
+<script>
+  function eliminarAntecedente() {
+    var table = $('#tableAntecedentesPatologicos').DataTable();
+    $('#tableAntecedentesPatologicos tbody').on('click', 'button#eliminarAntecedente', function () {
+      table
+        .row($(this).parents('tr'))
+        .remove()
+        .draw();
+    });
+  }
+
+  function eliminarPatologico() {
+    var table = $('#tablePatologicosFamiliares').DataTable();
+    $('#tablePatologicosFamiliares tbody').on('click', 'button#eliminarPatologico', function () {
+      table
+        .row($(this).parents('tr'))
+        .remove()
+        .draw();
+    });
+  }
+
+  function CategorySelected(category_id) {
+    console.log("CATEGORY ID", "category_id");
+  }
+
+  // INGRESOS POR MES
+  function getEarningByMonth() {
+    if ($("#monthSelect").val() != "0") {
+      let params = {
+        "month": $("#monthSelect").val(),
+        "year": $("#yearSelect").val(),
+        "doctor_id": ((JSON.parse(localStorage.getItem("identity"))).id).toString(),
+      }
+      console.log(params)
+      let datos = JSON.stringify(params)
+      $.ajax({
+        type: 'POST',
+        url: 'https://telemedicina.today/api/earning/month',
+        data: datos,
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        success: function (response) {
+          console.log('RESPONSE JQUERY', response)
+          console.log('SELECT', $("#monthSelect").val())
+          $("#totalInfo").text(response.data.total)
+          $("#nroConsultasInfo").text(response.data.nro_consultas)
+          $("#duracionInfo").text(response.data.duration_total)
+          $("#nroConsultas").text(response.data.nro_consultas)
+          $("#otros").text(response.data.otros)
+          $("#total").text(response.data.total)
+        },
+        error: function (error) {
+          console.log(error);
+        }
+      });
+    } else {
+      let params = {
+        "doctor_id": "4",
+      }
+
+      let datos = JSON.stringify(params)
+      $.ajax({
+        type: 'POST',
+        url: 'https://telemedicina.today/api/earning/year',
+        data: datos,
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        success: function (response) {
+          console.log('RESPONSE JQUERY', response)
+          console.log('SELECT', $("#monthSelect").val())
+          $("#totalInfo").text(response.data.total)
+          $("#nroConsultasInfo").text(response.data.nro_consultas)
+          $("#duracionInfo").text(response.data.duration_total)
+          $("#nroConsultas").text(response.data.nro_consultas)
+          $("#otros").text(response.data.otros)
+          $("#total").text(response.data.total)
+        },
+        error: function (error) {
+          console.log(error);
+        }
+      });
+    }
+  }
+
+  // ELIMINAR DATATABLES
+  function eliminarMedicamento() {
+    var table = $('#tableTratamiento').DataTable();
+
+    $('#tableTratamiento tbody').on('click', 'button#eliminarMedicamento', function () {
+      table
+        .row($(this).parents('tr'))
+        .remove()
+        .draw();
+    });
+  }
+
+  function eliminarDiagnostico() {
+    var table = $('#tableDiagnostico').DataTable();
+
+    $('#tableDiagnostico tbody').on('click', 'button#eliminarDiagnostico', function () {
+      table
+        .row($(this).parents('tr'))
+        .remove()
+        .draw();
+    });
+  }
+
+  // ELIMINAR DATATABLES END
+
+  if (screen.width >= 992 && screen.width <= 1100) {
+    document.getElementById('nav0').style.height = '600px'
+  } else if (screen.width >= 1101 && screen.width <= 1306) {
+  } else {
+  }
+
+  function llamadaentrante() {
+    $('#llamadaentrante').modal();
+
+    document.getElementById('llamadaentrante').style.width = '100%'
+    document.getElementById('llamadaentrante').style.paddingRight = '0px'
+    document.getElementById('llamadaentrante').style.paddingLeft = '0px'
+
+  }
+  function llamada() {
+    $('#llamadaentrante').modal('close');
+    $('#llamada').modal();
+    document.getElementById('llamada').style.width = '100%'
+    document.getElementById('llamada').style.paddingRight = '0px'
+    document.getElementById('llamada').style.paddingLeft = '0px'
+  }
+
+  function llamadaN() {
+    $('#llamada').modal('close');
+  }
+
+  function llamadaentranteN() {
+    $('#llamadaentrante').modal('close');
+    document.getElementById('llamadaentrante').style.width = '100%'
+  }
+
+</script>
+<!-- Fin Script Llamada -->
+
+</html>

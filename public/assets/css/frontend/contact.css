@@ -1,0 +1,96 @@
+/*** ---------- Contact Css Start ----------*/
+.form-control {
+    background-color: #fff;
+    border: 1px solid #D6D4D4;
+    width: 100%;
+}
+
+.contact .input-group {
+    display: block;
+}
+
+form {
+    padding: 15px 15px 15px 0;
+}
+/* input[type="text"], input[type="email"] {
+    display: block;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 100%;
+} */
+.input-group{ margin-bottom: 15px;}
+
+.media-right{
+    padding-top: 7%;
+
+}
+.address1>li{margin-bottom: 30px;}
+.media-top .box-icon {
+    background-color: #E0E0E0;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+    display: table;
+    height: 40px;
+    width: 40px;
+    margin:0px;
+}
+.media-top .box-icon>i{position: relative;
+left: 8px;
+top:7px;
+}
+.padleft10{
+    padding-left: 10px;
+}
+.padbtm2{
+    padding-bottom: 5%;
+}
+
+#address_margt{
+    margin-top: 40px;
+}
+.resize_vertical{
+    resize: vertical;
+}
+h2{
+  color: #000000;
+}
+btn-color-orange{
+
+}
+.formulario {
+  padding-top:35px;
+}
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+  height: 420px;
+  margin: 1rem;
+  width: 45%;
+  position: relative;
+}
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.espacio-bottom{
+  padding-bottom: 50px;
+}
+.espacio-top{
+  padding-top: 50px;
+}
+.espacio-left{
+  padding-left: 50px;
+}
+.espacio-right{
+  padding-right: 50px;
+}
+.text-center{
+  text-align: center;
+}
+.boton{
+  padding: 15px 65px !important;
+}
+.text-orange{
+  color:#e22715 !important;
+}
+/*** ---------- //Contact Css End ----------*/

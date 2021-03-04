@@ -1,0 +1,43 @@
+name: $(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- master
+
+variables:
+  app: 'fps-app-ws-alodoctor'
+  tag: 'tag'
+  azureSubscriptionEndpoint: 'Producción'
+  azureContainerRegistry: 'fpsregistry.azurecr.io'
+  
+stages:
+- stage: buildStage
+  jobs:
+  - job: buildJob
+    displayName: buildJob
+    pool:
+      name: Azure Pipelines
+      vmImage: 'ubuntu-18.04'
+    steps:
+    - bash: |
+        ccommit="$(Build.SourceVersion)"
+        echo "##vso[task.setvariable variable=tag]${ccommit:0:8}"
+      displayName: 'createTag'
+      name: createTag
+    - task: Docker@1
+      displayName: 'Build Imagen'
+      name: imageBuild
+      inputs:
+        containerregistrytype: 'Azure Container Registry'
+        azureSubscriptionEndpoint: '$(azureSubscriptionEndpoint)'
+        azureContainerRegistry: '$(azureContainerRegistry)'
+        command: 'Build an image'
+        dockerFile: '**/Dockerfile'
+        imageName: '$(app):$(tag)'
+    - task: Docker@1
+      displayName: 'Push Imagen'
+      inputs:
+        containerregistrytype: 'Azure Container Registry'
+        azureSubscriptionEndpoint: '$(azureSubscriptionEndpoint)'
+        azureContainerRegistry: '$(azureContainerRegistry)'
+        command: 'Push an image'
+        imageName: '$(app):$(tag)'

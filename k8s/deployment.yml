@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: #{NAMESPACE}
+  labels:
+    app.kubernetes.io/name: #{NAMESPACE}
+    app.kubernetes.io/part-of: #{NAMESPACE}
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: fps-deployment-#{TYPEAPP}-#{NAMEAPP}
+  namespace: #{NAMESPACE}
+  labels:
+    app.kubernetes.io/name: fps-deployment-#{TYPEAPP}-#{NAMEAPP}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fps-app-#{TYPEAPP}-#{NAMEAPP}
+      tier: #{TIERAPP}
+  template:
+    metadata:
+      labels:
+        app: fps-app-#{TYPEAPP}-#{NAMEAPP}
+        tier: #{TIERAPP}
+    spec:
+      containers:
+       - name: fps-app-#{TYPEAPP}-#{NAMEAPP}
+         image: fpsregistry.azurecr.io/fpsregistry/fps-app-#{TYPEAPP}-#{NAMEAPP}:#{TAG}
+         env:
+         - name: PROFILE
+           value: #{PROFILE}
+         resources:
+           limits:
+             memory: "256Mi" 
+      imagePullSecrets:
+       - name: secretregistryazure
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: #{NAMESPACE}
+  labels:
+    app.kubernetes.io/name: fps-deployment-#{TYPEAPP}-#{NAMEAPP}
+  name: fps-nodeport-#{TYPEAPP}-#{NAMEAPP}
+spec:
+  selector:
+    app: fps-app-#{TYPEAPP}-#{NAMEAPP}
+    tier: #{TIERAPP}
+  ports:
+  - name: http
+    protocol: "TCP"
+    port: #{PORT_APP}
+    targetPort: #{PORT_APP}
+  type: NodePort

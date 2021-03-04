@@ -1,0 +1,108 @@
+.medicina-banner{
+    background-image: url(https://assets.babylonhealth.com/what-we-treat/babylon-laptop-consultation.jpg);
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: cover;
+}
+
+.title-banner{
+    color: #fff;
+    margin-top: -10px;
+}
+
+.button-banner{
+    background-color: #fff;
+    border: 1px solid;
+}
+
+.content-banner{
+    padding: 35vh 30px 30px 30px;
+}
+
+.section-doctors-title{
+    padding: 50px 50px 0px 50px;
+}
+
+.p-content{
+    text-align: justify;
+}
+
+.btn-book-appointment{
+    padding-top: 15px;
+}
+
+.testimony{
+    background: #e22715;
+    padding: 100px 50px 100px 50px;
+}
+
+h3{
+    color: #fff;
+}
+
+.section-especialists{
+    padding-bottom: 70px;
+}
+
+.section-when-to-use{
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title-when-to-use{
+    color: #000;
+}
+
+.p-when-to-use{
+    padding-right: 35px;
+    text-align: justify;
+}
+
+.section-privacity{
+    background-color: #f9f9f9;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title-section-privacity{
+    color: #000;
+}
+
+.btn-section-privacy{
+    background-color: #fff;
+    border: 1px solid;
+}
+
+.text-section-privacity{
+    text-align: left;
+}
+
+.img-section-privacity{
+    padding-top: 60px;
+    padding-left: 60px;
+}
+
+.section-condition{
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title-section-condition{
+    color: #000;
+}
+
+.item-section-condition{
+    padding-top: 15px;
+}
+
+.section-app{
+    background-color: #f9f9f9;
+}
+
+.content-info-doctor {
+    padding: 15px;
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/web/paciente/" />
+    <meta charset="utf-8" />
+    <title>Paciente</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/farmacias-logo.ico"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/dataTables.materialize.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/icon-material.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/paciente/paciente.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/materialize.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/icon-material.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/fonts/font-ubuntu.css"
+    />
+    <!-- PDF MAKER -->
+    <script src="assets/build/pdfmake.min.js"></script>
+    <script src="assets/build/vfs_fonts.js"></script>
+    <!-- PDF MAKER END -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://checkout.culqi.com/v2"></script>
+    <script type="text/javascript" src="assets/js/push.js"></script>
+    <script type="text/javascript" src="assets/js/qrcode.js"></script>
+    <script src="assets/js/avatar.min.js"></script>
+
+    <style media="screen">
+      #gallery img {
+        width: 250px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .material-placeholder {
+        display: inline;
+      }
+    </style>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <app-root></app-root>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/materialize.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/vendors/datatables/js/jquery.dataTables.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/dataTables.materialize.js"
+    ></script>
+
+    <script type="text/javascript">
+      function culqi() {
+        let user = JSON.parse(localStorage.getItem("identity"));
+        console.log("entra");
+        let isMainCard = $("#isMainCard:checked").val();
+        let isMain = false;
+        if (isMainCard == "on") {
+          isMain = true;
+        }
+
+        if (Culqi.token) {
+          var token = Culqi.token.id;
+          let json = {
+            token_culqi: token,
+            user_id: user.id,
+            is_main_card: isMain,
+          };
+          console.log("DATA CULQI", json);
+          let data = JSON.stringify(json);
+          $.ajax({
+            type: "POST",
+            url: "https://telemedicina.today/api/culqi/save/card",
+            data: data,
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (response) {
+              document.getElementById("wordAddCard").style.display = "block";
+              document.getElementById("loaderAddCard").style.display = "none";
+              if (response.object == "error") {
+                alert(`ERROR: ${response.merchant_message}`);
+              } else {
+                let waitCard = localStorage.getItem("waitCard");
+
+                if (waitCard == "true") {
+                  localStorage.removeItem("waitCard");
+                  window.location.href =
+                    "https://telemedicina.today/web/paciente/consulta-medica";
+                } else {
+                  localStorage.removeItem("waitCard");
+                  window.location.href =
+                    "https://telemedicina.today/web/paciente/monedero";
+                }
+              }
+            },
+            error: function (error) {
+              window.location.href =
+                "https://telemedicina.today/web/paciente/consulta-medica";
+              console.log(`ERROR: `, error);
+              // document.getElementById('wordAddCard').style.display = 'block'
+              // document.getElementById('loaderAddCard').style.display = 'none'
+              // alert(`ERROR: ${error}`)
+            },
+          });
+        } else {
+          document.getElementById("wordAddCard").style.display = "block";
+          document.getElementById("loaderAddCard").style.display = "none";
+          alert(`ERROR: ${Culqi.error.merchant_message}`);
+        }
+      }
+      var table = $("#tableReceta").DataTable();
+
+      $("#tableReceta tbody").on("click", "tr", function () {
+        console.log(table.row(this).data());
+      });
+
+      function removeImage(item) {
+        let image = document.getElementById("span" + item);
+        image.style.display = "none";
+      }
+
+      function removePdf(item) {
+        let pdf = document.getElementById("div" + item);
+        pdf.style.display = "none";
+      }
+
+      function uploadFile(file, i) {
+        var url = "https://api.cloudinary.com/v1_1/YOU/image/upload";
+        var xhr = new XMLHttpRequest();
+        var formData = new FormData();
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
+        // Update progress (can be used to show progress indicator)
+        xhr.upload.addEventListener("progress", function (e) {
+          updateProgress(i, (e.loaded * 100.0) / e.total || 100);
+        });
+
+        xhr.addEventListener("readystatechange", function (e) {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            updateProgress(i, 100); // <- Add this
+          } else if (xhr.readyState == 4 && xhr.status != 200) {
+            // Error. Inform the user
+          }
+        });
+
+        formData.append("upload_preset", "YOU");
+        formData.append("file", file);
+        xhr.send(formData);
+      }
+
+      function previewFile(file) {
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onloadend = function () {
+          let img = document.createElement("img");
+          img.classList.add("materialboxed");
+          img.src = reader.result;
+          document.getElementById("gallery").appendChild(img);
+          $(document).ready(function () {
+            $(".materialboxed").materialbox();
+          });
+        };
+      }
+
+      function updateProgress(fileNumber, percent) {
+        uploadProgress[fileNumber] = percent;
+        let total =
+          uploadProgress.reduce((tot, curr) => tot + curr, 0) /
+          uploadProgress.length;
+        console.debug("update", fileNumber, percent, total);
+        progressBar.value = total;
+      }
+
+      function handleFiles(files) {
+        files = [...files];
+        initializeProgress(files.length);
+        files.forEach(uploadFile);
+        files.forEach(previewFile);
+      }
+      function initializeProgress(numFiles) {
+        // progressBar.value = 0
+        uploadProgress = [];
+
+        for (let i = numFiles; i > 0; i--) {
+          uploadProgress.push(0);
+        }
+      }
+    </script>
+    <script src="runtime.js" defer></script>
+    <script src="polyfills-es5.js" nomodule defer></script>
+    <script src="polyfills.js" defer></script>
+    <script src="main.js" defer></script>
+  </body>
+</html>

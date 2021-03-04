@@ -1,0 +1,51 @@
+
+.panel-heading span {
+	margin-top: 1px;
+	font-size: 12px;
+}
+
+
+.mb10{margin-bottom:10px !important}
+.mt10{margin-top: 10px !important}
+.mix{
+	padding-left: 0px;
+	padding-right: 0px;
+	position:relative;
+	display:none;
+	font-weight:400;color:#777;height:auto;overflow:visible}
+
+.panel{
+
+	width:100%;
+	background-color: #ffffff;
+}
+.glyphicon{
+	font-weight: lighter;
+}
+.btn-style{
+	background-color:#ced2cb;
+	color: #ffffff;
+}
+.text-white{
+	color:#000000;
+}
+
+.panel-body{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.espacio-bottom{
+  padding-bottom: 80px;
+}
+.espacio-top{
+  padding-top: 150px;
+}
+.espacio-left{
+  padding-left: 50px;
+}
+.espacio-right{
+  padding-right: 50px;
+}
+.text-orange{
+  color:#e22715 !important;
+}

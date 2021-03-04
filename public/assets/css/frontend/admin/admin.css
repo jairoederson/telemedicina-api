@@ -1,0 +1,313 @@
+body, html{
+  font-family: 'Ubuntu', sans-serif !important;
+}
+/* .modal-cabecera{
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+  border-bottom: none !important;
+} */
+table {
+  font-size: 13px;
+}
+th{
+  font-size: 12px !important;
+}
+.nota{
+  line-height: 2rem;
+}
+.nota-title{
+  font-size: 18px;
+}
+.icon-close{
+  margin-top:-40px !important;
+  margin-right: 5px;
+  color: #7e4105;
+}
+.color-red{
+  background-color: red !important;
+}
+.icon-close > a {
+  color: #7e4105;
+  text-shadow: 1px 1px 2px #fafafa;
+  font-size: 20px !important;
+}
+.icon-close > a:hover{
+  color: #000000 !important;
+  font-size: 20px !important;
+}
+.text-justify{
+  text-align:justify;
+}
+.modal-pie{
+  background-color: #f4f4f4;
+}
+.tabs-li > li{
+  padding-left:0px !important;
+  padding-right: 0px !important;
+  text-align: center;
+}
+.input-border{
+  border-bottom: 1px solid #d2d2d2;
+}
+.dataTables_filter{
+  background-color:#f5f5f5;
+  padding-right: 5%;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: 20%;
+  padding-left: 0px;
+}
+.dataTables_filter > label > input{
+  width: 245px !important;
+  background-color:#f5f5f5;
+  border-bottom: 1px solid #ebebeb;
+  background: url(/assets/images/search.png) right no-repeat;
+  background-size: 18px;
+  padding-right: 10px;
+}
+.dataTables_filter > label > input:focus{
+  width: 245px !important;
+  background-color:#f5f5f5;
+  border-bottom: 1px solid #868686;
+}
+.format{
+  text-transform: none !important;
+}
+.btn-crud{
+  border-radius: 2px !important;
+}
+.btn-verde{
+  background-color: #868686 !important;
+  border-color: #868686 !important;
+  border-radius:5px !important;
+  border: 1px solid #4a8608 !important;
+}
+.btn-naranja{
+  background-color: #e22715 !important;
+  border-color: #a0540d !important;
+  border-radius:5px !important;
+  border: 1px solid #a0540d !important;
+}
+.padding-bottom{
+  padding-bottom: 25px;
+}
+.padding-top{
+  padding-top: 25px;
+}
+.padding-left{
+  padding-left: 25px;
+}
+.padding-right{
+  padding-right: 25px;
+}
+.margin-bottom{
+  margin-bottom: 25px;
+}
+.margin-top{
+  margin-top: 25px;
+}
+
+.margin-left{
+  margin-left: 25px;
+}
+.margin-right{
+  margin-right: 25px;
+}
+.section-header{
+  margin-top: 50px;
+  width: 100%;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px;
+  /* box-shadow: 5px 5px 5px #d0d0d0 !important; */
+  /* -webkit-box-shadow: 0px 0px 5px #d0d0d0 !important;
+    -moz-box-shadow: 0px 0px 5px #d0d0d0 !important;
+    box-shadow: 0px 0px 5px #d0d0d0 !important; */
+  /* box-shadow: 0 1px 6px 0 rgba(0,0,0,.12), 0 1px 6px 0 rgba(0,0,0,.12); */
+  border-top: 1px solid #d0d0d0;
+  border-left: 1px solid #d0d0d0;
+  border-right: 1px solid #d0d0d0;
+}
+.dashboard-header{
+  margin-top: 50px;
+  margin-left: 5px;
+  width: 100%;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px;
+}
+.border-bottom{
+  border-bottom: 1px solid #ccc;
+}
+.border-top{
+  border-top: 1px solid #ccc;
+}
+.color-gris{
+  color: #727272;
+}
+.logo-imagen{
+  margin-top: 5px;
+}
+
+.name-admin{
+  margin-top: 10px !importants;
+}
+
+.icon-color{
+  color: #000000 !important;
+  font-size: 20px !important;
+  letter-spacing: 0.5px;
+}
+.color-icon{
+  color: #9f9f9f !important;
+}
+.menu-letter-color{
+  color: #9f9f9f !important;
+  letter-spacing: 0.5px;
+
+}
+.icon-size{
+  margin-top: 8px;
+}
+.icon-nav{
+  font-size: 18px;
+}
+.label-nav{
+    margin-left: 10px;
+    color:black !important;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.4px;
+}
+
+.input-format{
+  /* border-bottom: 1px solid #d0d0d0 !important; */
+  height: 3rem !important;
+}
+.btn-agregar-medico{
+  border-radius: 5px !important;
+  background-color: #868686 !important;
+  padding-bottom: 0px;
+}
+
+
+.header-title{
+  font-size: 19px;
+  font-weight: bold;
+  padding-left:5px;
+}
+
+.format{
+      text-transform: none !important;
+}
+
+.format-input{
+  height: 3.5rem !important;
+}
+/* INDEX */
+.title-box{
+  color: #000000 !important;
+}
+.box-info{
+  background-color
+}
+.without-padding{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.title-tag{
+  color: #727272;
+}
+/* INDEX END */
+
+/* MEDICO */
+.icon-viz{
+  font-size: 25px;
+  margin-top: -100px;
+}
+.img-form{
+  border-radius: 50% !important;
+}
+.medico-header{
+  margin-top: 50px;
+  width: 1088px;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px;
+}
+.medico-content{
+  margin-right: -20px;
+  margin-left: -17px;
+  padding: 0px 20px 0px 17px !important;
+}
+.icon-fullscreen{
+  color: #FFFFFF;
+  font-size: 16px;
+
+}
+.link-fullscreen{
+  margin-top: 0px !important;
+}
+.items-cv{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+ /* MEDICO END */
+
+/* SELECT POSTULANTE */
+.select-postulante{
+  margin-top: -10px !important;
+
+}
+/* SELECT POSTULANTE END */
+
+
+/* CONSULTA */
+.generalCont1{
+  border-bottom: 1px solid #cacaca;
+  margin-bottom: 20px;
+}
+
+.generalCont2{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.img-chat{
+  border-radius: 50%;
+}
+.doc-postulantes{
+  padding: 20px;
+}
+.message-chat{
+  background-color: #f5f5f5;
+  margin-top: 10px;
+  border-radius: 10px;
+  /* padding-left: 20px; */
+  padding:20px;
+}
+/* CONSULTA END */
+
+/* ASOCIADOS */
+.table-empleados{
+  width: 1100px !important;
+}
+/* ASOCIADOS */
+
+/* PAGO */
+.selector{
+  /* border-bottom: 1px solid #000000 !important; */
+  -webkit-appearance: none;
+  /*webkit browsers */
+  -moz-appearance: none;
+  /*Firefox */
+  appearance: none;
+  /* modern browsers */
+  border-radius: 0;
+}
+/* PAGO END */
+
+.btn-format {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid red !important;
+  color: red !important;
+}

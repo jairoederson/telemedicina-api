@@ -1,0 +1,149 @@
+html[dir=rtl] body > .header .navbar {
+  margin-right: 250px;
+  margin-left: 0;
+}
+
+html[dir=rtl] body > .header .logo {
+  float: right;
+}
+
+html[dir=rtl] .right-side > .content-header > .breadcrumb {
+  float: left;
+  left: 10px;
+  right: inherit;
+}
+
+html[dir=rtl] .page-sidebar-menu .livicon {
+  float: right;
+  margin-left: 10px;
+}
+
+html[dir=rtl] .page-sidebar .page-sidebar-menu li > a > .badge,
+html[dir=rtl] .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu li > a > .badge {
+  float: left;
+}
+
+html[dir=rtl] .page-sidebar-menu .livicon {
+  float: right;
+  margin-top: -2px;
+  margin-right: 10px;
+}
+
+html[dir=rtl] body > .header .navbar .sidebar-toggle {
+  float: right;
+}
+
+html[dir=rtl] .navbar-right {
+  float: left !important;
+}
+
+html[dir=rtl] .arrow {
+  float: left;
+}
+
+html[dir=rtl] .sidebar_threeicons {
+  float: right;
+}
+
+html[dir=rtl] .skin-josh .navbar .navbar-right > .nav {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+html[dir=rtl] .media-left,
+html[dir=rtl] .media > .pull-left {
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+html[dir=rtl] .panel .pull-right {
+  float: left !important;
+}
+
+html[dir=rtl] .panel .pull-left {
+  float: right !important;
+}
+
+html[dir=rtl] .pull-right > .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+
+html[dir=rtl] .navbar-right .dropdown-menu {
+  left: 0;
+  right: auto;
+}
+
+html[dir=rtl] .nav .dropdown-menu .menu i {
+  padding: 10px 10px 30px 30px;
+}
+
+html[dir=rtl] .back-to-top {
+  left: 30px;
+  right: auto;
+}
+
+html[dir=rtl] .tooltip {
+  position: fixed;
+  top: inherit !important;
+  bottom: 43px;
+  left: 85px !important;
+  display: none;
+}
+
+html[dir=rtl] .tooltip.right .tooltip-arrow {
+  top: 50% !important;
+}
+
+html[dir=rtl] .todoitemcheck {
+  float: right;
+}
+
+html[dir=rtl] .todoitembtns {
+  text-align: left;
+}
+
+html[dir=rtl] .jvectormap-zoomin,
+html[dir=rtl] .jvectormap-zoomout {
+  padding: 5px 5px 13px 13px;
+}
+
+html[dir=rtl] .datetimepicker {
+  direction: rtl !important;
+}
+
+html[dir=rtl] .required {
+  float: right;
+}
+
+html[dir=rtl] table.table-bordered.dataTable th,
+html[dir=rtl] table.table-bordered.dataTable td {
+  border-right-width: 0;
+  border-left-width: 1px;
+}
+
+html[dir=rtl] .dataTables_length {
+  text-align: left;
+}
+
+html[dir=rtl] .margin_right15 {
+  margin-left: 15px;
+}
+
+html[dir=rtl] .margin_left15 {
+  margin-right: 15px;
+}
+
+html[dir=rtl] .radio-inline input[type=radio] {
+  margin-right: -20px;
+  margin-left: inherit;
+}
+
+html[dir=rtl] .checkbox input[type=checkbox],
+html[dir=rtl] .checkbox-inline input[type=checkbox],
+html[dir=rtl] .radio input[type=radio],
+html[dir=rtl] .radio-inline input[type=radio] {
+  margin-right: -20px;
+  margin-left: inherit;
+}
+
